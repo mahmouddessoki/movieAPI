@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+*{
+    font-family: 'Dancing Script', cursive;
+}
+.about-desc{
+    h1{
+        font-size: 5rem;
+        font-weight: bolder;
+
+    }
+    p{
+        font-size: 1.7rem;
+        a{
+            text-decoration: none;
+        }
+        span{
+            font-size: 1.9rem;
+            font-weight: 700;
+        }
+
+    }
+    .contact_me{
+        i{
+            font-size: 1.5rem !important;
+        }
+    }
+    
+}
+.aboutImg{
+   p{
+       padding-left: 20%;
+       font-size: 1.5rem;
+   }
+}

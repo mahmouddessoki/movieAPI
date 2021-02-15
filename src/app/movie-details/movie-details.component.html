@@ -1,0 +1,26 @@
+
+
+
+
+<div class="container py-5">
+    <div class="row">
+        <div class="col-sm-12 col-lg-4">
+            <div>
+                <img [src]="imgPath+allMovieData.poster_path" class="img-fluid">
+            </div>
+        </div>
+        
+        <div class="col-sm-12 col-lg-8 align-self-center mt-sm-3">
+            <div>
+                <h2 >{{allMovieData.original_title}}</h2>
+                <p class="text-success">{{allMovieData.tagline}}</p>
+                <p class="mt-3">Vote_average : {{allMovieData.vote_average}}</p>
+                <p class="my-3">Vote_count : {{allMovieData.vote_count}}</p>
+                <p>Vote_count : {{allMovieData.popularity}}</p>
+
+                <p class='movieOverview my-5'>{{allMovieData.overview}}</p>
+            </div>
+        </div>
+    </div>
+</div>
+

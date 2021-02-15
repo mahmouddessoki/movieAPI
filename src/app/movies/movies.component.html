@@ -1,0 +1,25 @@
+
+<div class="container py-5">
+    <div class="container">
+        <input  [(ngModel)] = "word" type="text" placeholder="search by movie title or word" class="form-control w-50 mx-auto my-5">
+
+    </div>
+
+
+    <div class="row">
+        
+        <div *ngFor="let oneMovie of allmovies | movieSearch : word" class="col-sm-6 col-md-4 col-lg-3 overflow-hidden ">
+            <div class="position-relative m-3 overflow-hidden movie"[routerLink] = "['/movieDetails',oneMovie.id]" >
+                <img [src]="imgPath+oneMovie.poster_path" class="img-fluid" >
+                
+                <div class="movie_hint">
+                    Click To KNOW More About The Movie
+                </div>
+
+            </div>
+
+            
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,53 @@
+
+
+<div class="container py-5">
+    <input  [(ngModel)] = "word" type="text" placeholder="search movie title" class="form-control w-50 my-5 ml-auto">
+    
+    <div class="row">
+        <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="brd w-25 mb-2"></div>
+
+            <h2>Tranding <br> Movies <br> to watch now</h2>
+            <p class="py-3">Most watched movies by days</p>
+
+            <div class="brd w-100 mb-2"></div>
+        </div>
+
+        <div *ngFor="let oneMovie of homeDataMovies | movieSearch : word " class="col-sm-6 col-md-4 col-lg-3">
+            <div class="position-relative" [routerLink] = "['/movieDetails',oneMovie.id]" >
+                <img [src]="imgPath+oneMovie.poster_path" class="img-fluid" >
+                <h2 class="h6"> {{oneMovie.title | uppercase}} </h2>
+
+                <span class="vote p-1 position-absolute" >{{oneMovie.vote_average}}</span>
+
+            </div>
+        </div>
+
+    </div>
+
+    <input  [(ngModel)] = "sWord" type="text" placeholder="search tv name" class="form-control w-50 my-5 ml-auto">
+  
+    <div class="row my-5">
+
+        <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="brd w-25 mb-2"></div>
+
+            <h2>Tranding <br> Tv <br> to watch now</h2>
+            <p class="py-3">Most watched movies by days</p>
+
+            <div class="brd w-100 mb-2"></div>
+        </div>
+
+        <div *ngFor="let oneMovie of homeDataTV | movieSearch : sWord " class="col-sm-6 col-md-4 col-lg-3">
+            <div class="position-relative" [routerLink] = "['/tvDetails',oneMovie.id]">
+                <img [src]="imgPath+oneMovie.poster_path" class="img-fluid" >
+                <h2 class="h6"> {{oneMovie.original_name}}</h2>
+                <span class="vote p-1 position-absolute" >{{oneMovie.vote_average}}</span>
+
+            </div>
+        </div>
+
+    </div>
+
+
+</div>

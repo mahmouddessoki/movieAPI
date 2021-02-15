@@ -1,0 +1,25 @@
+
+
+
+
+
+<div class="container py-5">
+    
+    <div class="row">
+        <div class="col-sm-12 col-lg-4">
+            <div class="person">
+                <img [src]="imgPath+personDetail.profile_path" class="img-fluid">
+            </div>
+        </div>
+        
+        <div class="col-sm-12 col-lg-8 align-self-center mt-sm-3">
+            <div>
+                <h2 >{{personDetail.name}}</h2>
+                <p class="mt-3">Place_of_birth : {{personDetail.place_of_birth}}</p>
+                <p class="my-3">BirthDay : {{personDetail.birthday}}</p>
+                <p>popularity : {{personDetail.popularity}}</p>
+            </div>
+        </div>
+    </div>
+</div>
+
