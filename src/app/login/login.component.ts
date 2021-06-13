@@ -24,6 +24,7 @@ export class LoginComponent implements OnInit {
           {
             localStorage.setItem("userToken",data.token)
             this._LoginDataService.saveUserData(data.user,data.token);
+            console.log(data.user);
             this._Router.navigate(['/home'])
 
           }

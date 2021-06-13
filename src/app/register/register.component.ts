@@ -31,6 +31,7 @@ export class RegisterComponent implements OnInit {
     this._RegisterDataService.sendRegisterData(registerData.value).subscribe((Data)=>{
       if(Data.message == "success")
       {
+        console.log(Data.value)
         this._Router.navigate(['/login'])
       }
     });
